@@ -1,0 +1,410 @@
+Prac3
+Demonstrate difference btwn merge and rebase(using git  bash)
+
+Create folder on desktop "GitMerge"
+		cd paste_GitMerge_Path
+		git init
+		vim Master1.txt - add data in file
+		git status
+		git add .
+		git status
+		git commit -m "addes Maste1.txt"
+		git status
+
+creating hiray branch 
+		git branch hiray
+		git status
+		git checkout hiray
+		git status
+
+Hiray@DESKTOP-377NRSH MINGW64 ~
+$ cd Desktop\\GitMerge
+bash: cd: Desktop\GitMerge: No such file or directory
+
+Hiray@DESKTOP-377NRSH MINGW64 ~
+$ cd C:\\Users\\Hiray\\Desktop\\GitMerge
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge
+$ git init
+Initialized empty Git repository in C:/Users/Hiray/Desktop/GitMerge/.git/
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ vim master1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        master1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git add .
+warning: in the working copy of 'master1.txt', LF will be replaced by CRLF the n
+ext time Git touches it
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   master1.txt
+
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git commit -m "addes Maste1.txt"
+[master (root-commit) bef4ede] addes Maste1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 master1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git branch hiray
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git checkout hiray
+Switched to branch 'hiray'
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git status
+On branch hiray
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ vim hiray1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git status
+On branch hiray
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hiray1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git add .
+warning: in the working copy of 'hiray1.txt', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git status
+On branch hiray
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hiray1.txt
+
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git commit -m "addes hiray1.txt"
+[hiray dc36a85] addes hiray1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hiray1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git status
+On branch hiray
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git log
+commit dc36a85181f727095778194a6bfabc30fd429161 (HEAD -> hiray)
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 10:35:33 2025 +0530
+
+    addes hiray1.txt
+
+commit bef4ede560e975c3976fe2558b6f4d778c170f57 (master)
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 10:30:52 2025 +0530
+
+    addes Maste1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git checkout master
+Switched to branch 'master'
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git checkout hiray
+Switched to branch 'hiray'
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (hiray)
+$ git checkout master
+Switched to branch 'master'
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ vim master2.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        master2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git add .
+warning: in the working copy of 'master2.txt', LF will be replaced by CRLF the n
+ext time Git touches it
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   master2.txt
+
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git commit -m "master2.txt is added"
+[master 0cca079] master2.txt is added
+ 1 file changed, 2 insertions(+)
+ create mode 100644 master2.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitMerge (master)
+$ git log
+Merge branch 'master' into hiray
+
+
+
+
+
+Merge: dc36a85 0cca079
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 10:45:49 2025 +0530
+
+    Merge branch 'master' into hiray
+
+commit 0cca079c2ee5c0067a5b6608709955c7f9e597e5 (master)
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 10:39:49 2025 +0530
+
+    master2.txt is added
+
+commit dc36a85181f727095778194a6bfabc30fd429161
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 10:35:33 2025 +0530
+
+    addes hiray1.txt
+
+commit bef4ede560e975c3976fe2558b6f4d778c170f57
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 10:30:52 2025 +0530
+
+    addes Maste1.txt
+		
+
+
+******************************ReBase**********************************************
+
+Hiray@DESKTOP-377NRSH MINGW64 ~
+$ cd C:\\Users\\Hiray\\Desktop\\GitRebase
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase
+$ git init
+Initialized empty Git repository in C:/Users/Hiray/Desktop/GitRebase/.git/
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ vim master1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git cat
+git: 'cat' is not a git command. See 'git --help'.
+
+The most similar commands are
+        clean
+        mktag
+        stage
+        stash
+        tag
+        var
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ cat master1.txt
+gsdfnasjkfnxdkhlnvmc,vnx
+gdngfdv
+this is master1.txt
+
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        master1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git add .
+warning: in the working copy of 'master1.txt', LF will be replaced by CRLF the n
+ext time Git touches it
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   master1.txt
+
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git commit -m "added master1.txt"
+[master (root-commit) f095fd8] added master1.txt
+ 1 file changed, 4 insertions(+)
+ create mode 100644 master1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git branch hiray
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git checkout hiray
+Switched to branch 'hiray'
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ vim hiray1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git status
+On branch hiray
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hiray1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git add .
+warning: in the working copy of 'hiray1.txt', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git status
+On branch hiray
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hiray1.txt
+
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git commit -m "added hiray1.txt"
+[hiray 3f046ae] added hiray1.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 hiray1.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git checkout master
+Switched to branch 'master'
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git commit -m "added hiray1.txt"
+On branch master
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ vim master2.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git add .
+warning: in the working copy of 'master2.txt', LF will be replaced by CRLF the n
+ext time Git touches it
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   master2.txt
+
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git commit -m "added master2.txt"
+[master 101ffa9] added master2.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 master2.txt
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (master)
+$ git checkout hiray
+Switched to branch 'hiray'
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git status
+On branch hiray
+nothing to commit, working tree clean
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git rebase master
+Successfully rebased and updated refs/heads/hiray.
+
+Hiray@DESKTOP-377NRSH MINGW64 ~/Desktop/GitRebase (hiray)
+$ git log
+commit af68d7023e4889805061429979101a4474d4f656 (HEAD -> hiray)
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 11:00:04 2025 +0530
+
+    added hiray1.txt
+
+commit 101ffa9bb125a2e06365cf336fb1970e053d7022 (master)
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 11:01:34 2025 +0530
+
+    added master2.txt
+
+commit f095fd835552cd09bac812d07c6ce7954662cd69
+Author: Jamaluddin Khan <ijamaluddinkhan@gmail.com>
+Date:   Fri Mar 21 10:58:18 2025 +0530
+
+    added master1.txt
+		
